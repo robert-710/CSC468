@@ -17,8 +17,8 @@ sudo apt-get install -y jq
 
 # the username needs to be changed
 while IFS= read -r line; do
-  sudo usermod -aG docker $line
-  sudo usermod -s /bin/bash $line
+  sudo usermod -aG docker roberts3
+  sudo usermod -s /bin/bash roberts3
 done < <( ls -l /users | grep 4096 | cut -d' ' -f3 )
 
 sudo cp /local/repository/docker_config/daemon.json /etc/docker/daemon.json

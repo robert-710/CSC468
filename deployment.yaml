@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: 127.0.0.1:30000/hw4image
+        image: roberts3/hw4image:latest
         ports:
           - name: http-port
             containerPort: 80

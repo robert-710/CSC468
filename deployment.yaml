@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  namespace: roberts3
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: 127.0.0.1:30000/hw4image
+        ports:
+          - name: http-port
+            containerPort: 80
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "53cretP@ss"
+        - name: MYSQL_DATABASE
+          value: csc468

@@ -1,0 +1,10 @@
+version: '3.7' # Or adjust the version as needed
+
+services:
+  mysql:
+    image: roberts3/hw4image:latest # Assumes you'll build separately
+    ports:
+      - "3306:3306"  # Expose MySQL port for connections
+    environment:
+      MYSQL_ROOT_PASSWORD: 53cretP@ss
+      MYSQL_DATABASE: csc468
